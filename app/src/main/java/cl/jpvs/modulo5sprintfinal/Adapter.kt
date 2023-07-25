@@ -44,9 +44,9 @@ class Adapter : RecyclerView.Adapter <Adapter.ViewHolder>(){
 
         }
     }
-        Interface ZapatillaCallBack {
+        interface ZapatillaCallBack {
         fun showZapatillas(zapatilla: Zapatilla)
 
     }
 
-    }
+ }
