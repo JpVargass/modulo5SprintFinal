@@ -2,6 +2,8 @@ package cl.jpvs.modulo5sprintfinal
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import cl.jpvs.modulo5sprintfinal.databinding.ActivityMainBinding
+
 /*
 *   Shoe Tap
 *  Primera Pantalla (Activitys)
@@ -12,8 +14,17 @@ import android.os.Bundle
 *
 * */
 class MainActivity : AppCompatActivity() {
+    lateinit var binding : ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+       binding = ActivityMainBinding.inflate(layoutInflater)
+       setContentView(binding.root)
+           iniAdapter()
+
+    }
+
+    private fun iniAdapter() {
+       val adapter = Adapter()
+
     }
 }
