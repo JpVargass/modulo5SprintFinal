@@ -1,5 +1,7 @@
 package cl.jpvs.modulo5sprintfinal
 
+import android.content.Context
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import cl.jpvs.modulo5sprintfinal.databinding.ActivityMainBinding
@@ -15,16 +17,14 @@ import cl.jpvs.modulo5sprintfinal.databinding.ActivityMainBinding
 * */
 class MainActivity : AppCompatActivity() {
     lateinit var binding : ActivityMainBinding
+    private lateinit var mSharedPreferences: SharedPreferences
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-       binding = ActivityMainBinding.inflate(layoutInflater)
+        mSharedPreferences = getSharedPreferences("MICarrito", Context.MODE_PRIVATE)
+        val binding = ActivityMainBinding.inflate(layoutInflater)
        setContentView(binding.root)
-           iniAdapter()
+
 
     }
 
-    private fun iniAdapter() {
-       val adapter = Adapter()
-
-    }
 }
