@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph">
-
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/zapatillaListFragment">
+    <fragment
+        android:id="@+id/zapatillaListFragment"
+        android:name="cl.jpvs.modulo5sprintfinal.ZapatillaListFragment"
+        android:label="ZapatillaListFragment" >
+        <action
+            android:id="@+id/action_zapatillaListFragment_to_zapatillaDetailFragment"
+            app:destination="@id/zapatillaDetailFragment" />
+        <action
+            android:id="@+id/action_zapatillaListFragment_to_fragCarritoCompras"
+            app:destination="@id/fragCarritoCompras" />
+    </fragment>
+    <fragment
+        android:id="@+id/zapatillaDetailFragment"
+        android:name="cl.jpvs.modulo5sprintfinal.ZapatillaDetailFragment"
+        android:label="fragment_zapatilla_detail"
+        tools:layout="@layout/fragment_zapatilla_detail" />
+    <fragment
+        android:id="@+id/fragCarritoCompras"
+        android:name="cl.jpvs.modulo5sprintfinal.FragCarritoCompras"
+        android:label="fragment_frag_carrito_compras"
+        tools:layout="@layout/fragment_frag_carrito_compras" />
 </navigation>

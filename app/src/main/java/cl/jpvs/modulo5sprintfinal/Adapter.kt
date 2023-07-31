@@ -1,6 +1,6 @@
 package cl.jpvs.modulo5sprintfinal
 
-import android.annotation.SuppressLint
+
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -13,7 +13,7 @@ class Adapter : RecyclerView.Adapter <Adapter.ViewHolder>(){
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val binding = ItemLayoutBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding = ItemLayoutBinding.inflate(LayoutInflater.from(parent.context),parent,false)
         return ViewHolder(binding)
     }
 
@@ -32,8 +32,7 @@ class Adapter : RecyclerView.Adapter <Adapter.ViewHolder>(){
 
     inner class ViewHolder(val binding: ItemLayoutBinding): RecyclerView.ViewHolder(binding.root) {
 
-        @SuppressLint("SetTextI18n")
-        fun bind(zapatilla: Zapatilla) {
+          fun bind(zapatilla: Zapatilla) {
             binding.textViewDescripcion.text = zapatilla.nombre
             binding.textViewPrecio.text = "$ " + zapatilla.precio.toString()
             binding.imVZapatilla.load(zapatilla.zImagenUrl)

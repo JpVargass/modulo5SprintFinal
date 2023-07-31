@@ -8,41 +8,9 @@
     android:background="@drawable/shape"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/tv_NombreZapateria"
-        style="@style/TextoStyleTitulo"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Shoes tap sucursal Chillan"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.50"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:name="cl.jpvs.modulo5sprintfinal.ZapatillaListFragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_NombreZapateria"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/faBtnCarrito"
-        android:layout_width="73dp"
-        android:layout_height="89dp"
-        android:clickable="true"
-        android:contentDescription="@string/agregar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerView"
-        app:layout_constraintVertical_bias="0.805"
-        app:srcCompat="@drawable/ic_launcher_foreground" />
-
+        android:layout_height="match_parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
